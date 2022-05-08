@@ -191,7 +191,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/User/dashboard.aspx">
                             <i class="menu-icon mdi mdi-television"></i>
-                            <span class="menu-title">Dashboardd</span>
+                            <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
 
@@ -204,13 +204,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/User/PurchaseItems.aspx">
                             <i class="menu-icon mdi mdi-chart-line"></i>
-                            <span class="menu-title">Purchase Items</span>
+                            <span class="menu-title">Loan DVD</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/User/AddItems.aspx">
                             <i class="menu-icon mdi mdi-table"></i>
-                            <span class="menu-title">Add Item</span>
+                            <span class="menu-title">Add DVD</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -234,7 +234,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/User/ItemDetails.aspx">
                             <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">Item Details</span
+                            <span class="menu-title">Item Details</span>
+                        </a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/User/ItemDetails.aspx">
+                            <i class="menu-icon mdi mdi-sticker"></i>
+                            <span class="menu-title">DVD</span>
                         </a>
                     </li>
                     <li class="nav-item">

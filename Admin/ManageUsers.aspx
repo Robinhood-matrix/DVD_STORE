@@ -7,18 +7,14 @@
     <i class="fas fa-users"></i>
 </span></h2>
     
-     <asp:GridView ID="GridView1" style="margin-left:32% ; margin-top:2%" class="table table-striped" runat="server"  DataSourceID="insertUsersSqlDataSource"   Width="50%" AllowSorting="False" PageSize="5" BackColor="White" BorderColor="#999999" AutoGenerateColumns="False"  BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None" Font-Bold="False" Font-Overline="False" Font-Strikeout="False" DataKeyNames="id">
+     <asp:GridView ID="GridView1" style="margin-left:32% ; margin-top:2%" class="table table-striped" runat="server"  DataSourceID="insertUsersSqlDataSource"   Width="50%" AllowSorting="True" PageSize="5" BackColor="White" BorderColor="#999999" AutoGenerateColumns="False"  BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="None" Font-Bold="False" Font-Overline="False" Font-Strikeout="False" DataKeyNames="UserNumber">
          <AlternatingRowStyle BackColor="#CCCCCC" />
         <Columns>
-            <asp:BoundField DataField="id" HeaderText="id" SortExpression="id" InsertVisible="False" ReadOnly="True" />
+            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+            <asp:BoundField DataField="UserNumber" HeaderText="UserNumber" SortExpression="UserNumber" ReadOnly="True" />
             <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-              <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
-              <asp:CommandField ButtonType="Image" CancelImageUrl="~/imgs/cancel.png" DeleteImageUrl="~/imgs/delete.png" EditImageUrl="~/imgs/edit.png" ShowEditButton="True" UpdateImageUrl="~/imgs/save.png">
-                <ControlStyle Height="25px" Width="25px" />
-            </asp:CommandField>
-            <asp:CommandField ButtonType="Image" CancelImageUrl="~/imgs/cancel.png" DeleteImageUrl="~/imgs/delete.png" EditImageUrl="~/imgs/cancel.png" ShowDeleteButton="True" UpdateImageUrl="~/imgs/save.png">
-                <ControlStyle Height="25px" Width="25px" />
-            </asp:CommandField>
+              <asp:BoundField DataField="UserType" HeaderText="UserType" SortExpression="UserType" />
+              <asp:BoundField DataField="UserPassword" HeaderText="UserPassword" SortExpression="UserPassword" />
         </Columns>
       
          <FooterStyle BackColor="#CCCCCC" />
@@ -34,18 +30,21 @@
     </asp:GridView>
 
 
-<asp:SqlDataSource ID="insertUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Users]" DeleteCommand="DELETE FROM [Users] WHERE [id] = @id" InsertCommand="INSERT INTO [Users] ([UserName], [password]) VALUES (@UserName, @password)" UpdateCommand="UPDATE [Users] SET [UserName] = @UserName, [password] = @password WHERE [id] = @id">
+<asp:SqlDataSource ID="insertUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:dvd_storeConnectionString1 %>" SelectCommand="SELECT * FROM [User]" DeleteCommand="DELETE FROM [User] WHERE [UserNumber] = @UserNumber" InsertCommand="INSERT INTO [User] ([UserNumber], [UserName], [UserType], [UserPassword]) VALUES (@UserNumber, @UserName, @UserType, @UserPassword)" UpdateCommand="UPDATE [User] SET [UserName] = @UserName, [UserType] = @UserType, [UserPassword] = @UserPassword WHERE [UserNumber] = @UserNumber">
     <DeleteParameters>
-        <asp:Parameter Name="id" Type="Int32" />
+        <asp:Parameter Name="UserNumber" Type="Int32" />
     </DeleteParameters>
     <InsertParameters>
+        <asp:Parameter Name="UserNumber" Type="Int32" />
         <asp:Parameter Name="UserName" Type="String" />
-        <asp:Parameter Name="password" Type="String" />
+        <asp:Parameter Name="UserType" Type="String" />
+        <asp:Parameter Name="UserPassword" Type="String" />
     </InsertParameters>
     <UpdateParameters>
         <asp:Parameter Name="UserName" Type="String" />
-        <asp:Parameter Name="password" Type="String" />
-        <asp:Parameter Name="id" Type="Int32" />
+        <asp:Parameter Name="UserType" Type="String" />
+        <asp:Parameter Name="UserPassword" Type="String" />
+        <asp:Parameter Name="UserNumber" Type="Int32" />
     </UpdateParameters>
 
     </asp:SqlDataSource>

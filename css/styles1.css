@@ -16585,7 +16585,7 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4 {
-    margin-top: 1.5rem !important;
+    margin-top: 40px !important;
 }
 
 .mr-4,
@@ -19216,6 +19216,7 @@ h2 {
 .h3,
 h3 {
     font-size: 1.56rem;
+    height: 41px;
 }
 
 .h4,

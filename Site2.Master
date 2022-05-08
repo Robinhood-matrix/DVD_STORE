@@ -69,7 +69,7 @@
                         </a>
                         <div class="sub-menu">
                             <a href="/Admin/ChangePassword.aspx"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="/SystemLogin/Login.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
+                            <a href="/User/dashboard.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
                         </div>
                     </li>
                     <li class="item">

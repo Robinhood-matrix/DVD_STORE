@@ -51,7 +51,7 @@ namespace MasterPageDemo.Login
                         else if (dt.Rows[i]["UserType"].ToString() == "User")
                             Response.Redirect("~/User/dashboard.aspx");
                         else if (dt.Rows[i]["UserType"].ToString() == "Assistant")
-                            Response.Redirect("~/PaidUser/PaidUser.aspx");
+                            Response.Redirect("~/Admin/Dashboard.aspx");
                     }
                     else
                     {

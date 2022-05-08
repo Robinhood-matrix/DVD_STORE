@@ -22,12 +22,12 @@
 </div>
         <br />
         <br />
-        <asp:SqlDataSource ID="CheckUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Users] WHERE ([UserName] = @UserName)">
+        <asp:SqlDataSource ID="CheckUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:dvd_storeConnectionString %>" SelectCommand="SELECT * FROM [User] WHERE ([UserName] = @UserName)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="username" Name="UserName" PropertyName="Text" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <asp:SqlDataSource ID="InsertUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" DeleteCommand="DELETE FROM [Users] WHERE [id] = @id" InsertCommand="INSERT INTO [Users] ([UserName], [password]) VALUES (@UserName, @password)" SelectCommand="SELECT * FROM [Users]" UpdateCommand="UPDATE [Users] SET [UserName] = @UserName, [password] = @password WHERE [id] = @id">
+        <asp:SqlDataSource ID="InsertUsersSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:dvd_storeConnectionString %>" DeleteCommand="DELETE FROM [User] WHERE [id] = @id" InsertCommand="INSERT INTO [User] ([UserName], [password]) VALUES (@UserName, @UserPassword)" SelectCommand="SELECT * FROM [User]" UpdateCommand="UPDATE [User] SET [UserName] = @UserName, [UserPassword] = @password WHERE [id] = @id">
             <DeleteParameters>
                 <asp:Parameter Name="id" Type="Int32" />
             </DeleteParameters>

@@ -19,5 +19,17 @@ namespace MasterPageDemo.User
             //customerTextBox.Text = customerDropDownList.SelectedValue;
            
         }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Search_btn_Click(object sender, EventArgs e)
+        {
+            GridView2.DataSourceID = "";
+            GridView2.DataSource = SqlDataSource1;
+            GridView2.DataBind();
+        }
     }
 }

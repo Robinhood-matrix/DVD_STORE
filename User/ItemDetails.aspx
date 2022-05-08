@@ -2,39 +2,71 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <asp:SqlDataSource ID="getItemsListSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [PurchasedItems] WHERE ([ItemCode] = @ItemCode)">
-            <SelectParameters>
-                <asp:ControlParameter ControlID="DropDownList2" Name="ItemCode" PropertyName="SelectedValue" Type="Int32" />
-            </SelectParameters>
-    </asp:SqlDataSource>
       
-    <h2 style="margin-left:5%; margin-top:5%"> Select Item to View Details  </h2>
+    <h2 style="margin-left:5%; margin-top:5%"> List of all DvDs  </h2>
     
     
-        <asp:DropDownList ID="DropDownList2" runat="server" style="margin-left:5%" CssClass="form-control" BorderColor="#CCCCCC" DataSourceID="SqlDataSource1" DataTextField="ItemName" DataValueField="ItemCode" Height="35px" Width="300px" AutoPostBack="True">
-    </asp:DropDownList>
-   
-        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
        
-        <asp:GridView ID="GridView1" runat="server" style="margin-left:5%"  class="table table-striped table-bordered mt-2" AutoGenerateColumns="False" DataKeyNames="InvoiceNo" DataSourceID="getItemsListSqlDataSource">
+    <h3>
+        &nbsp;</h3>
+    <p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="getDvdList" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" AllowPaging="True" AllowSorting="True" Height="238px" Width="911px">
+            <AlternatingRowStyle BackColor="PaleGoldenrod" />
             <Columns>
-                <asp:BoundField DataField="InvoiceNo" HeaderText="InvoiceNo" ReadOnly="True" SortExpression="InvoiceNo" />
-                <asp:BoundField DataField="PurchasedDate" HeaderText="PurchasedDate" SortExpression="PurchasedDate" />
-                <asp:BoundField DataField="Supp_id" HeaderText="Supp_id" SortExpression="Supp_id" />
-                <asp:BoundField DataField="ItemCode" HeaderText="ItemCode" SortExpression="ItemCode" />
-                <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
-                <asp:BoundField DataField="Amount" HeaderText="Amount" SortExpression="Amount" />
-                <asp:BoundField DataField="TotalAmount" HeaderText="TotalAmount" SortExpression="TotalAmount" />
+                <asp:BoundField DataField="DVDTitle" HeaderText="DVDTitle" SortExpression="DVDTitle" />
+                <asp:BoundField DataField="ActorSurname" HeaderText="ActorSurname" SortExpression="ActorSurname" />
+                <asp:BoundField DataField="ActorFirstName" HeaderText="ActorFirstName" SortExpression="ActorFirstName" />
+                <asp:BoundField DataField="ProducerName" HeaderText="ProducerName" SortExpression="ProducerName" />
+                <asp:BoundField DataField="StudioName" HeaderText="StudioName" SortExpression="StudioName" />
+                <asp:BoundField DataField="DateReleased" HeaderText="DateReleased" SortExpression="DateReleased" />
             </Columns>
-         
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
         </asp:GridView>
+        <asp:SqlDataSource ID="getDvdList" runat="server" ConnectionString="<%$ ConnectionStrings:dvd_storeConnectionString %>" SelectCommand="SELECT DVDTitle.DVDTitle, Actor.ActorFirstName, Actor.ActorSurname, Producer.ProducerName, Studio.StudioName, DVDTitle.DateReleased FROM CastMember INNER JOIN DVDTitle ON CastMember.DVDNumber = DVDTitle.DVDNumber INNER JOIN Producer ON DVDTitle.ProducerNumber = Producer.ProducerNumber INNER JOIN Studio ON DVDTitle.StudioNumber = Studio.StudioNumber INNER JOIN DVDCopy ON DVDTitle.DVDNumber = DVDCopy.DVDNumber INNER JOIN Actor ON CastMember.ActorNumber = Actor.ActorNumber"></asp:SqlDataSource>
+    </p>
+    
+       <h3> Copy Number</h3>
     <p>
-        &nbsp;</p>
-    <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [items]"></asp:SqlDataSource>
+        Copy Number
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;<asp:Button ID="Search_btn" runat="server" Text="Search" />
     </p>
     <p>
         &nbsp;</p>
+    <p>
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataSourceID="getCopyNumber" ForeColor="Black" GridLines="None" Height="205px" Width="908px">
+            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+            <Columns>
+                <asp:BoundField DataField="CopyNumber" HeaderText="CopyNumber" SortExpression="CopyNumber" />
+                <asp:BoundField DataField="MemberFirstName" HeaderText="MemberFirstName" SortExpression="MemberFirstName" />
+                <asp:BoundField DataField="MemberLastName" HeaderText="MemberLastName" SortExpression="MemberLastName" />
+                <asp:BoundField DataField="DateOut" HeaderText="DateOut" SortExpression="DateOut" />
+                <asp:BoundField DataField="DateDue" HeaderText="DateDue" SortExpression="DateDue" />
+                <asp:BoundField DataField="DVDTitle" HeaderText="DVDTitle" SortExpression="DVDTitle" />
+            </Columns>
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="getCopyNumber" runat="server" ConnectionString="<%$ ConnectionStrings:dvd_storeConnectionString %>" SelectCommand="SELECT Loan.CopyNumber, Member.MemberFirstName, Member.MemberLastName, Loan.DateOut, Loan.DateDue, DVDTitle.DVDTitle FROM DVDCopy INNER JOIN Loan ON DVDCopy.CopyNumber = Loan.CopyNumber INNER JOIN Member ON Loan.MemberNumber = Member.MemberNumber INNER JOIN DVDTitle ON DVDCopy.DVDNumber = DVDTitle.DVDNumber WHERE (DVDCopy.CopyNumber = @CopyNumber)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="TextBox1" Name="CopyNumber" PropertyName="Text" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </p>
     <p>
         &nbsp;</p>
     <p>
