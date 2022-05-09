@@ -48,7 +48,7 @@ namespace MasterPageDemo.Login
                     if (UserName == username.Text && Password == password.Text)
                     {
                         Session["UserName"] = UserName;
-                        if (dt.Rows[i]["UserType"].ToString() == "Admin")
+                        if (dt.Rows[i]["UserType"].ToString() == "Manager")
                             Response.Redirect("~/Manager/Dashboard.aspx");
                        else if (dt.Rows[i]["UserType"].ToString() == "Assistant")
                             Response.Redirect("~/Assistant/dashboard.aspx");
