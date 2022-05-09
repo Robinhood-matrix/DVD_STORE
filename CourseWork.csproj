@@ -69,10 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
-    <Content Include="Admin\AddUsers.aspx" />
-    <Content Include="Admin\ChangePassword.aspx" />
-    <Content Include="Admin\Dashboard.aspx" />
-    <Content Include="Admin\ManageUsers.aspx" />
+    <Content Include="Manager\AddUsers.aspx" />
+    <Content Include="Manager\ChangePassword.aspx" />
+    <Content Include="Manager\Dashboard.aspx" />
+    <Content Include="Manager\ManageUsers.aspx" />
     <Content Include="css\adminSidebar.css" />
     <Content Include="css\BootStrapStyleSheet.css" />
     <Content Include="css\PasswordChange.css" />
@@ -108,9 +108,9 @@
     <Content Include="imgs\save.png" />
     <Content Include="SystemLogin\Login.aspx" />
     <Content Include="usercss\style1.css" />
-    <Content Include="User\AddItems.aspx" />
-    <Content Include="User\AddSupplier.aspx" />
-    <Content Include="User\Category.aspx" />
+    <Content Include="Assistant\AddItems.aspx" />
+    <Content Include="Assistant\AddSupplier.aspx" />
+    <Content Include="Assistant\Category.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\clndr.css" />
     <Content Include="css\custom.css" />
@@ -152,16 +152,16 @@
     <Content Include="images\logo.svg" />
     <Content Include="images\saturation.png" />
     <Content Include="images\transparent.png" />
-    <Content Include="User\ChangePassword.aspx" />
-    <Content Include="User\CustomerDetails.aspx" />
-    <Content Include="User\dashboard.aspx" />
-    <Content Include="User\ItemDetails.aspx" />
-    <Content Include="User\PurchaseInvoice.aspx" />
-    <Content Include="User\PurchaseItems.aspx" />
-    <Content Include="User\RemoveItems.aspx" />
-    <Content Include="User\SellInvoice.aspx" />
-    <Content Include="User\SellItem.aspx" />
-    <Content Include="User\StoreDetails.aspx" />
+    <Content Include="Assistant\ChangePassword.aspx" />
+    <Content Include="Assistant\UserDetails.aspx" />
+    <Content Include="Assistant\dashboard.aspx" />
+    <Content Include="Assistant\DvdDetails.aspx" />
+    <Content Include="Assistant\PurchaseInvoice.aspx" />
+    <Content Include="Assistant\LoanDvd.aspx" />
+    <Content Include="Assistant\RemoveItems.aspx" />
+    <Content Include="Assistant\SellInvoice.aspx" />
+    <Content Include="Assistant\SellItem.aspx" />
+    <Content Include="Assistant\StoreDetails.aspx" />
     <Content Include="vendors\css\BootStrapStyleSheet.css" />
     <Content Include="vendors\css\vendor.bundle.addons.css" />
     <Content Include="vendors\css\vendor.bundle.base.css" />
@@ -182,43 +182,33 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AddUsers.aspx.cs">
+    <Compile Include="Manager\AddUsers.aspx.cs">
       <DependentUpon>AddUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AddUsers.aspx.designer.cs">
+    <Compile Include="Manager\AddUsers.aspx.designer.cs">
       <DependentUpon>AddUsers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ChangePassword.aspx.cs">
+    <Compile Include="Manager\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+    <Compile Include="Manager\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Dashboard.aspx.cs">
+    <Compile Include="Manager\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+    <Compile Include="Manager\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ManageUsers.aspx.cs">
+    <Compile Include="Manager\ManageUsers.aspx.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ManageUsers.aspx.designer.cs">
+    <Compile Include="Manager\ManageUsers.aspx.designer.cs">
       <DependentUpon>ManageUsers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses2.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
     </Compile>
     <Compile Include="Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>
@@ -248,25 +238,25 @@
     <Compile Include="SystemLogin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\AddItems.aspx.cs">
+    <Compile Include="Assistant\AddItems.aspx.cs">
       <DependentUpon>AddItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\AddItems.aspx.designer.cs">
+    <Compile Include="Assistant\AddItems.aspx.designer.cs">
       <DependentUpon>AddItems.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\AddSupplier.aspx.cs">
+    <Compile Include="Assistant\AddSupplier.aspx.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\AddSupplier.aspx.designer.cs">
+    <Compile Include="Assistant\AddSupplier.aspx.designer.cs">
       <DependentUpon>AddSupplier.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\Category.aspx.cs">
+    <Compile Include="Assistant\Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Category.aspx.designer.cs">
+    <Compile Include="Assistant\Category.aspx.designer.cs">
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
@@ -284,94 +274,78 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="User\ChangePassword.aspx.cs">
+    <Compile Include="Assistant\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\ChangePassword.aspx.designer.cs">
+    <Compile Include="Assistant\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\CustomerDetails.aspx.cs">
-      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+    <Compile Include="Assistant\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\CustomerDetails.aspx.designer.cs">
-      <DependentUpon>CustomerDetails.aspx</DependentUpon>
+    <Compile Include="Assistant\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\dashboard.aspx.cs">
+    <Compile Include="Assistant\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\dashboard.aspx.designer.cs">
+    <Compile Include="Assistant\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\ItemDetails.aspx.cs">
-      <DependentUpon>ItemDetails.aspx</DependentUpon>
+    <Compile Include="Assistant\DvdDetails.aspx.cs">
+      <DependentUpon>DvdDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\ItemDetails.aspx.designer.cs">
-      <DependentUpon>ItemDetails.aspx</DependentUpon>
+    <Compile Include="Assistant\DvdDetails.aspx.designer.cs">
+      <DependentUpon>DvdDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\PurchaseInvoice.aspx.cs">
+    <Compile Include="Assistant\PurchaseInvoice.aspx.cs">
       <DependentUpon>PurchaseInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\PurchaseInvoice.aspx.designer.cs">
+    <Compile Include="Assistant\PurchaseInvoice.aspx.designer.cs">
       <DependentUpon>PurchaseInvoice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\PurchaseItems.aspx.cs">
-      <DependentUpon>PurchaseItems.aspx</DependentUpon>
+    <Compile Include="Assistant\LoanDvd.aspx.cs">
+      <DependentUpon>LoanDvd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\PurchaseItems.aspx.designer.cs">
-      <DependentUpon>PurchaseItems.aspx</DependentUpon>
+    <Compile Include="Assistant\LoanDvd.aspx.designer.cs">
+      <DependentUpon>LoanDvd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\RemoveItems.aspx.cs">
+    <Compile Include="Assistant\RemoveItems.aspx.cs">
       <DependentUpon>RemoveItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\RemoveItems.aspx.designer.cs">
+    <Compile Include="Assistant\RemoveItems.aspx.designer.cs">
       <DependentUpon>RemoveItems.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\SellInvoice.aspx.cs">
+    <Compile Include="Assistant\SellInvoice.aspx.cs">
       <DependentUpon>SellInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\SellInvoice.aspx.designer.cs">
+    <Compile Include="Assistant\SellInvoice.aspx.designer.cs">
       <DependentUpon>SellInvoice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\SellItem.aspx.cs">
+    <Compile Include="Assistant\SellItem.aspx.cs">
       <DependentUpon>SellItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\SellItem.aspx.designer.cs">
+    <Compile Include="Assistant\SellItem.aspx.designer.cs">
       <DependentUpon>SellItem.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\StoreDetails.aspx.cs">
+    <Compile Include="Assistant\StoreDetails.aspx.cs">
       <DependentUpon>StoreDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\StoreDetails.aspx.designer.cs">
+    <Compile Include="Assistant\StoreDetails.aspx.designer.cs">
       <DependentUpon>StoreDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataClasses1.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </None>
-    <Content Include="DataClasses2.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="DataClasses2.dbml.layout">
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="vendors\iconfonts\mdi\bower.json" />
@@ -395,7 +369,6 @@
     <Content Include="Site3.Master" />
     <Content Include="Site2.Master" />
     <Content Include="Site4.Master" />
-    <Content Include="SystemLogin\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

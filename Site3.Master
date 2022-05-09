@@ -41,12 +41,12 @@
                         <p> Admin | Manager</p>
                     </center>
                     <li class="item">
-                        <a href="/Admin/Dashboard.aspx" class="menu-btn">
+                        <a href="/Manager/Dashboard.aspx" class="menu-btn">
                             <i class="fas fa-desktop"></i><span>Dashboard</span>
                         </a>
                     </li>
                     <li class="item" id="profile">
-                        <a href="/Admin/AddUsers.aspx" class="menu-btn">
+                        <a href="/Manager/AddUsers.aspx" class="menu-btn">
                             <i class="fas fa-user-circle"></i><span> Add Users</span>
                         </a>
                        <%-- <div class="sub-menu">
@@ -55,7 +55,7 @@
                         </div>--%>
                     </li>
                     <li class="item" id="messages">
-                        <a href="/Admin/ManageUsers.aspx" class="menu-btn">
+                        <a href="/Manager/ManageUsers.aspx" class="menu-btn">
                             <i class="fas fa-envelope"></i><span>Manage Users</span>
                         </a>
                     <%--    <div class="sub-menu">
@@ -70,14 +70,10 @@
                         </a>
                         <div class="sub-menu">
                             <a href="/Admin/ChangePassword.aspx"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="/SystemLogin/Login.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
+                            <a href="/Assistant/dashboard.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
                         </div>
                     </li>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About</span>
-                        </a>
-                    </li>
+                   
                 </div>
             </div>
          
@@ -102,3 +98,8 @@
 
 </body>
 </html>
+<footer>
+     <p>
+         Copyright © 2022 Ropeys Dvd Store. All rights reserved. 
+     </p>
+    </footer>

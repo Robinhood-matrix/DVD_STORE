@@ -13,5 +13,12 @@ namespace MasterPageDemo
         {
 
         }
+
+        protected void Search_btn_Click(object sender, EventArgs e)
+        {
+            GridView1.DataSourceID = "";
+            GridView1.DataSource = SqlDataSource1;
+            GridView1.DataBind();
+        }
     }
 }

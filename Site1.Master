@@ -56,28 +56,26 @@
                     <img src="/images/logo3.png" alt="logo" />
                 </a>--%>
             <%--</div>--%>
-            <a href="/SystemLogin/Login.aspx">DVDs</a>
+            
+            Ropeys DVD Store&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/Home.aspx">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active" style="margin-top:4%">
-                        <a class="nav-link" style="font-size:15px" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item" style="margin-top:4%" >
-                        <a class="nav-link" style="font-size:15px" href="#">Order</a>
-                    </li>
-                       <li class="nav-item dropdown" style="margin-left:720%">
+                   
+                    
+                       <li class="nav-item dropdown" style="margin-left:3220%">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                             <i class="mdi mdi-bell"></i>
-                            <span class="count">4</span>
+                            <span class="count">2</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                             <a class="dropdown-item">
                                 <p class="mb-0 font-weight-normal float-right">
-                                    You have 4 new notifications
+                                    You have 2 new notifications
                                 </p>
                                 <span class="badge badge-pill badge-warning float-right">View all</span>
                             </a>
@@ -89,7 +87,7 @@
                                     </div>
                                 </div>
                                 <div class="preview-item-content">
-                                    <h6 class="preview-subject font-weight-medium text-dark">Application Error</h6>
+                                    <h6 class="preview-subject font-weight-medium text-dark">Dvd Copy Loan Request</h6>
                                     <p class="font-weight-light small-text">
                                         Just now
                                     </p>
@@ -117,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="preview-item-content">
-                                    <h6 class="preview-subject font-weight-medium text-dark">New user registration</h6>
+                                    <h6 class="preview-subject font-weight-medium text-dark">Dvd Copy returned!!!</h6>
                                     <p class="font-weight-light small-text">
                                         2 days ago
                                     </p>
@@ -149,9 +147,8 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#" class="dropdown-item mt-2">Manage Accounts
-                            </a>
-                            <a href="/User/ChangePassword.aspx" class="dropdown-item" style="color: black">Change Password
+                          
+                            <a href="/Assistant/ChangePassword.aspx" class="dropdown-item" style="color: black">Change Password
                             </a>
                             <a class="dropdown-item" style="color: black">Check Inbox
                             </a>
@@ -175,87 +172,59 @@
                                     <img style="width: 30px; height: 30px" src="/images/logo123.png" alt="profile image">
                                 </div>
                                 <div class="text-wrapper">
-                                    <p class="profile-name"> DVD Store </p>
+                                    <p class="profile-name"> Ropeys DVD Store </p>
                                     <div>
-                                        <small class="designation text-muted">User </small>
-                                        <span class="status-indicator online"></span>
+                                         <asp:Label ID="Userlbl" runat="server"></asp:Label>
+                                        <small class="designation text-muted"> </small>
+                                        <span class="status-indicator online">
+                                       
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-block">
-                                New DVDs 
-                                <i class="mdi mdi-plus"></i>
-                            </button>
+                            <a class="btn btn-primary btn-block" href="/Assistant/AddItems.aspx" role="button">New DVDs      <i class="mdi mdi-plus"></i></a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/User/dashboard.aspx">
+                        <a class="nav-link active" href="/Assistant/dashboard.aspx">
                             <i class="menu-icon mdi mdi-television"></i>
-                            <span class="menu-title">Dashboard</span>
+                            <span class="menu-title"> Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/Category.aspx">
-                            <i class="menu-icon mdi mdi-backup-restore"></i>
-                            <span class="menu-title">Add Category</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/User/PurchaseItems.aspx">
+                        <a class="nav-link" href="/Assistant/LoanDvd.aspx">
                             <i class="menu-icon mdi mdi-chart-line"></i>
                             <span class="menu-title">Loan DVD</span>
                         </a>
                     </li>
+                  
+
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/AddItems.aspx">
-                            <i class="menu-icon mdi mdi-table"></i>
-                            <span class="menu-title">Add DVD</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/User/SellItem.aspx">
+                        <a class="nav-link" href="/Assistant/AddSupplier.aspx">
                             <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">Sell Item</span>
+                            <span class="menu-title">Issue DVD</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/AddSupplier.aspx">
+                        <a class="nav-link" href="/Assistant/UserDetails.aspx">
                             <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">Add Suppliers</span>
+                            <span class="menu-title">Member Details</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/User/CustomerDetails.aspx">
+                        <a class="nav-link" href="/Assistant/DvdDetails.aspx">
                             <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">Customer Details</span>
+                            DVD
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/User/ItemDetails.aspx">
-                            <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">Item Details</span>
-                        </a>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="/User/ItemDetails.aspx">
-                            <i class="menu-icon mdi mdi-sticker"></i>
-                            <span class="menu-title">DVD</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                            <i class="menu-icon mdi mdi-restart"></i>
-                            <span class="menu-title">My DVDs</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="auth">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/User/StockDetails.aspx">Sort Items of Stock  </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/User/RemoveItems.aspx">Remove Items From Stock </a>
+                 
+                            
+                            &nbsp;<a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth"><span class="menu-title">My DVDs</span> <i class="menu-arrow"></i></a>
+                         <div class="collapse" id="auth">
+                             <ul class="nav flex-column sub-menu">
+                                 <li class="nav-item"><a class="nav-link" href="/Assistant/StockDetails.aspx">Sort Items of Stock  </a></li>
+                                 <li class="nav-item"><a class="nav-link" href="/Assistant/RemoveItems.aspx">Remove Items From Stock </a>
                                 </li>
                              <%--   <li class="nav-item">
                                     <a class="nav-link" href="pages/samples/register.html">Register </a>
@@ -266,8 +235,8 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="pages/samples/error-500.html">500 </a>
                                 </li>--%>
-                            </ul>
-                        </div>
+                             </ul>
+                         </div>
                     </li>
                 </ul>
             </nav>
@@ -302,4 +271,5 @@
                 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" > </script>
             <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.bootstrap4.min.js" > </script>--%>
 </body>
+   
 </html>

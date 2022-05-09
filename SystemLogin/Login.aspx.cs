@@ -22,6 +22,7 @@ namespace MasterPageDemo.Login
         
         protected void loginBtn_Click(object sender, EventArgs e)
         {
+            Session["user"] = username.Text;
             string str, UserName, Password;
             SqlCommand com;
             SqlDataAdapter sqlda;
@@ -43,15 +44,14 @@ namespace MasterPageDemo.Login
                 {
                     UserName = dt.Rows[i]["UserName"].ToString();
                     Password = dt.Rows[i]["UserPassword"].ToString();
+
                     if (UserName == username.Text && Password == password.Text)
                     {
                         Session["UserName"] = UserName;
                         if (dt.Rows[i]["UserType"].ToString() == "Admin")
-                            Response.Redirect("~/Admin/Dashboard.aspx");
-                        else if (dt.Rows[i]["UserType"].ToString() == "User")
-                            Response.Redirect("~/User/dashboard.aspx");
-                        else if (dt.Rows[i]["UserType"].ToString() == "Assistant")
-                            Response.Redirect("~/Admin/Dashboard.aspx");
+                            Response.Redirect("~/Manager/Dashboard.aspx");
+                       else if (dt.Rows[i]["UserType"].ToString() == "Assistant")
+                            Response.Redirect("~/Assistant/dashboard.aspx");
                     }
                     else
                     {
@@ -103,6 +103,11 @@ namespace MasterPageDemo.Login
 
 
 
+        }
+
+        protected void SkipBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Home.aspx");
         }
     }
 }

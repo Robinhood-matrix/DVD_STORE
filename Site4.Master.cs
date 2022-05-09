@@ -11,7 +11,7 @@ namespace MasterPageDemo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Userlbl.Text = (string)Session["user"];
         }
     }
 }

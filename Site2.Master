@@ -27,7 +27,7 @@
                     <ul>
                         <li><a href="#"><i class="fas fa-search"></i></a></li>
                         <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="#"><i class="fas fa-power-off"></i></a></li>
+                        <li><a href="/SystemLogin/Login.aspx"><i class="fas fa-power-off"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -40,21 +40,13 @@
                         <p> Admin | Manager</p>
                     </center>
                     <li class="item">
-                        <a href="/Admin/Dashboard.aspx" class="menu-btn">
+                        <a href="/Manager/Dashboard.aspx" class="menu-btn">
                             <i class="fas fa-desktop"></i><span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="item" id="profile">
-                        <a href="/Admin/AddUsers.aspx" class="menu-btn">
-                            <i class="fas fa-user-circle"></i><span> Add Users</span>
-                        </a>
-                       <%-- <div class="sub-menu">
-                            <a href="#"><i class="fas fa-image"></i><span>Picture</span></a>
-                            <a href="#"><i class="fas fa-address-card"></i><span>Info</span></a>
-                        </div>--%>
-                    </li>
+                    
                     <li class="item" id="messages">
-                        <a href="/Admin/ManageUsers.aspx" class="menu-btn">
+                        <a href="/Manager/ManageUsers.aspx" class="menu-btn">
                             <i class="fas fa-envelope"></i><span>Manage Users</span>
                         </a>
                     <%--    <div class="sub-menu">
@@ -68,15 +60,11 @@
                             <i class="fas fa-cog"></i><span>Settings <i class="fas fa-chevron-down drop-down"></i></span>
                         </a>
                         <div class="sub-menu">
-                            <a href="/Admin/ChangePassword.aspx"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="/User/dashboard.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
+                            <a href="/Manager/ChangePassword.aspx"><i class="fas fa-lock"></i><span>Password</span></a>
+                            <a href="/Assistant/dashboard.aspx"><i class="fas fa-user"></i><span>User Dashboard</span></a>
                         </div>
                     </li>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About</span>
-                        </a>
-                    </li>
+                   
                 </div>
             </div>
             <!--sidebar end-->
@@ -121,3 +109,8 @@
      </script>
 </body>
 </html>
+<footer>
+     <p>
+         Copyright © 2022 Ropeys Dvd Store. All rights reserved. 
+     </p>
+    </footer>

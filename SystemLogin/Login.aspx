@@ -28,6 +28,8 @@
             <%--<button type="submit" name="login"> Log In</button>--%>
             <asp:Button ID="loginBtn" style="margin-left:18%;margin-top:-1%" name="login"  runat="server" Height="32px"  Text="Login" Width="250px" OnClick="loginBtn_Click" />
 
+            <asp:Button ID="SkipBtn" style="margin-left:18%;margin-top:-1%" name="login"  runat="server" Height="32px"  Text="Skip as Guest" Width="250px" OnClick="SkipBtn_Click" />
+
             <br />
             <asp:Label ID="eLabel" runat="server" Font-Size="Medium" ForeColor="#FF3300"></asp:Label>
             <br />

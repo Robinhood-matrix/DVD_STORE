@@ -9827,6 +9827,7 @@ pre {
     padding-left: 12.5px;
     margin-right: auto;
     margin-left: auto;
+    height: 82px;
 }
 
 .row {
@@ -11065,8 +11066,6 @@ pre {
 
 .form-control {
     display: block;
-    width: 100%;
-    padding: 0.56rem 1.375rem;
     font-size: 1rem;
     line-height: 1;
     color: #495057;
@@ -13116,7 +13115,7 @@ input[type="button"].btn-block {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    height: 698px;
 }
 
     .navbar > .container,
@@ -18684,6 +18683,7 @@ input:focus {
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
+    margin-right: 0px;
 }
 
     .sidebar .nav {
@@ -18708,7 +18708,8 @@ input:focus {
             white-space: nowrap;
             height: 52px;
             color: #4a4a4a;
-        }
+    width: 104px;
+}
 
             .sidebar .nav .nav-item .nav-link i.menu-arrow {
                 margin-left: auto;
@@ -18792,7 +18793,7 @@ input:focus {
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
-    height: auto;
+    height: 97px;
 }
 
     .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper {
@@ -18970,11 +18971,11 @@ input:focus {
 /* Navbar */
 .navbar.default-layout {
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(120deg, #00e4d0, #5983e8);
     transition: background 0.25s ease;
     -webkit-transition: background 0.25s ease;
     -moz-transition: background 0.25s ease;
     -ms-transition: background 0.25s ease;
+    height: 56px;
 }
 
     .navbar.default-layout .navbar-brand-wrapper {
@@ -18983,7 +18984,7 @@ input:focus {
         -moz-transition: width 0.25s ease, background 0.25s ease;
         -ms-transition: width 0.25s ease, background 0.25s ease;
         background: #ffffff;
-        width: 255px;
+        width: 177px;
         height: 63px;
     }
 
@@ -19236,6 +19237,7 @@ h6 {
 
 p {
     font-size: 13px;
+    margin-left: 560px;
 }
 
 .display-1 {
